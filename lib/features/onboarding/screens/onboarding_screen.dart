@@ -1,11 +1,11 @@
+import 'package:docdoc/core/helper/extensions.dart';
 import 'package:docdoc/core/routing/routes.dart';
 import 'package:docdoc/core/theme/text_styles.dart';
-import 'package:docdoc/core/widgets/custom_button.dart';
+import 'package:docdoc/core/widgets/app_custom_button.dart';
 import 'package:docdoc/features/onboarding/widgets/doc_doc_logo.dart';
 import 'package:docdoc/features/onboarding/widgets/doctor_and_text_and_back_logo.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:docdoc/core/helper/extensions.dart';
 
 class OnboardingScreen extends StatelessWidget {
   const OnboardingScreen({super.key});
@@ -27,13 +27,16 @@ class OnboardingScreen extends StatelessWidget {
                     children: [
                       Text(
                         'Manage and schedule all of your medical appointments easily with Docdoc to get a new experience.',
-                        style: TextStyles.font13GreyRegular,
+                        style: TextStyles.font13GreyW400,
                         textAlign: TextAlign.center,
                       ),
                       SizedBox(height: 30.h),
-                      CustomButton(text: 'Get Strated', onPressed: () {
-                        context.pushNamed(Routes.login);
-                      }),
+                      AppCustomButton(
+                        text: 'Get Strated',
+                        onPressed: () {
+                          context.pushNamed(Routes.login);
+                        },
+                      ),
                     ],
                   ),
                 ),
