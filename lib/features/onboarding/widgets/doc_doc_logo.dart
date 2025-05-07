@@ -17,7 +17,7 @@ class DocDocLogo extends StatelessWidget {
           width: 40.h,
           height: 40.h,
         ),
-        Text('DocDoc', style: TextStyles.font24Black700Wieght),
+        Text('DocDoc', style: TextStyles.font24BlackW700),
       ],
     );
   }
