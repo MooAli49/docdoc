@@ -16,6 +16,8 @@ class AppTextFormField extends StatelessWidget {
     this.isObscureText,
     this.keyboardType,
     this.contentPadding,
+    this.controller,
+    required this.validator,
   });
   final EdgeInsetsGeometry? contentPadding;
   final InputBorder? focusedBorder;
@@ -27,11 +29,17 @@ class AppTextFormField extends StatelessWidget {
   final Widget? suffixIcon;
   final bool? isObscureText;
   final TextInputType? keyboardType;
+  final TextEditingController? controller;
+  final Function(String?) validator;
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
-      obscureText: isObscureText ?? true,
+      controller: controller,
+      validator: (value) {
+        return validator(value);
+      },
+      obscureText: isObscureText ?? false,
       keyboardType: keyboardType ?? TextInputType.emailAddress,
       style: style ?? TextStyles.font14DarkBlueW500,
       decoration: InputDecoration(
@@ -68,6 +76,10 @@ class AppTextFormField extends StatelessWidget {
               ),
               borderRadius: BorderRadius.circular(16.r),
             ),
+        focusedErrorBorder: OutlineInputBorder(
+          borderSide: BorderSide(color: ColorsManger.errorColor, width: 1.3),
+          borderRadius: BorderRadius.circular(16.r),
+        ),
       ),
     );
   }

@@ -1,7 +1,6 @@
 import 'package:docdoc/core/di/dependency_injection.dart';
 import 'package:docdoc/core/routing/routes.dart';
 import 'package:docdoc/features/home/ui/screens/home_screen.dart';
-import 'package:docdoc/features/login/data/repository/login_repo.dart';
 import 'package:docdoc/features/login/logic/cubit/login_cubit.dart';
 import 'package:docdoc/features/login/ui/screens/login_screen.dart';
 import 'package:docdoc/features/onboarding/screens/onboarding_screen.dart';
@@ -13,15 +12,15 @@ class AppRouter {
     //  this args is used to pass data between screens like this arguments: arguyment as className
     // final args = settings.arguments;
     switch (settings.name) {
-      case Routes.onboarding:
+      case Routes.onboardingScreen:
         return MaterialPageRoute(builder: (_) => const OnboardingScreen());
-      case Routes.home:
+      case Routes.homeScreen:
         return MaterialPageRoute(builder: (_) => const HomeScreen());
-      case Routes.login:
+      case Routes.loginScreen:
         return MaterialPageRoute(
           builder:
               (_) => BlocProvider(
-                create: (context) => LoginCubit(loginRepo: getIt<LoginRepo>()),
+                create: (context) => getIt<LoginCubit>(),
                 child: const LoginScreen(),
               ),
         );
