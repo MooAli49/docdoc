@@ -43,13 +43,15 @@ dependencies:
   pretty_dio_logger: ^1.4.0
   retrofit_generator: ^9.1.9
   # main used for generating code
-  freezed: ^3.0.6
-  freezed_annotation: ^3.0.0
+  freezed: ^2.4.5
+  freezed_annotation: ^2.4.1
   # DI
   get_it: ^8.0.3
   # automatically generate code for converting JSON to Dart objects
   json_annotation: ^4.9.0
   json_serializable: ^6.9.5
+  # for generating code
+  build_runner: ^2.4.15
   # localaization
   intl: ^0.19.0
   easy_localization: ^3.0.7+1

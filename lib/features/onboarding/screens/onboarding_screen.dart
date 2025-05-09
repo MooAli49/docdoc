@@ -34,7 +34,7 @@ class OnboardingScreen extends StatelessWidget {
                       AppCustomButton(
                         text: 'Get Strated',
                         onPressed: () {
-                          context.pushNamed(Routes.login);
+                          context.pushNamed(Routes.loginScreen);
                         },
                       ),
                     ],
