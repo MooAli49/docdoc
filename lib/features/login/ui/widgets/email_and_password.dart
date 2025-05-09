@@ -45,7 +45,7 @@ class _EmailAndPasswordState extends State<EmailAndPassword> {
   @override
   void dispose() {
     super.dispose();
-    passwordController.dispose();
+    passwordController.removeListener(() {});
   }
 
   @override
@@ -58,7 +58,9 @@ class _EmailAndPasswordState extends State<EmailAndPassword> {
             controller: context.read<LoginCubit>().emailController,
             hintText: 'Email',
             validator: (value) {
-              if (value == null || value.isEmpty || !AppRegex.isEmailValid(value)) {
+              if (value == null ||
+                  value.isEmpty ||
+                  !AppRegex.isEmailValid(value)) {
                 return 'Please enter valid email';
               }
             },
@@ -80,9 +82,7 @@ class _EmailAndPasswordState extends State<EmailAndPassword> {
                 });
               },
             ),
-            validator: (value) {
-
-            },
+            validator: (value) {},
           ),
           verticalSpace(24),
           PasswordValidation(
