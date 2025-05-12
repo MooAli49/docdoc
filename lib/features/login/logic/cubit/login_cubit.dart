@@ -5,7 +5,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class LoginCubit extends Cubit<LoginState> {
-  LoginCubit({required this.loginRepo}) : super(LoginState.initial());
+  LoginCubit( this.loginRepo) : super(LoginState.initial());
 
   final LoginRepo loginRepo;
 
