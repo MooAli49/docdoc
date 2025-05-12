@@ -2,8 +2,8 @@ import 'package:docdoc/core/theme/text_styles.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
-class AlreadyHaveAnAccountText extends StatelessWidget {
-  const AlreadyHaveAnAccountText({super.key});
+class DontHaveAccountText extends StatelessWidget {
+  const DontHaveAccountText({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +12,7 @@ class AlreadyHaveAnAccountText extends StatelessWidget {
       text: TextSpan(
         children: <TextSpan>[
           TextSpan(
-            text: 'Already have an account? ',
+            text: 'Don\'t have account? ',
             style: TextStyles.font13DarkBlueW400,
           ),
           TextSpan(
