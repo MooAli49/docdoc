@@ -1,6 +1,6 @@
 import 'package:docdoc/core/helper/extensions.dart';
 import 'package:docdoc/core/routing/routes.dart';
-import 'package:docdoc/core/theme/colors_manger.dart';
+import 'package:docdoc/core/theme/colors_manager.dart';
 import 'package:docdoc/core/theme/text_styles.dart';
 import 'package:docdoc/features/login/logic/cubit/login_cubit.dart';
 import 'package:docdoc/features/login/logic/cubit/login_state.dart';
@@ -29,7 +29,7 @@ class LoginBlocListener extends StatelessWidget {
                     width: 200.w,
                     child: Center(
                       child: const CircularProgressIndicator(
-                        color: ColorsManger.mainBlue,
+                        color: ColorsManager.mainBlue,
                       ),
                     ),
                   ),
@@ -49,7 +49,7 @@ class LoginBlocListener extends StatelessWidget {
                 return AlertDialog(
                   icon: Icon(
                     Icons.error,
-                    color: ColorsManger.errorColor,
+                    color: ColorsManager.errorColor,
                     size: 32,
                   ),
                   content: Text(error, style: TextStyles.font15DarkBlueW500),

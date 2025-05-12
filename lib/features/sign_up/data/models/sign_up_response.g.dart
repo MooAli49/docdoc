@@ -1,13 +1,13 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'sign_up_response.dart';
+part of 'signup_response.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-SignUpResponse _$SignUpResponseFromJson(Map<String, dynamic> json) =>
-    SignUpResponse(
+SignupResponse _$SignUpResponseFromJson(Map<String, dynamic> json) =>
+    SignupResponse(
       message: json['message'] as String?,
       data:
           json['data'] == null
@@ -17,7 +17,7 @@ SignUpResponse _$SignUpResponseFromJson(Map<String, dynamic> json) =>
       code: (json['code'] as num?)?.toInt(),
     );
 
-Map<String, dynamic> _$SignUpResponseToJson(SignUpResponse instance) =>
+Map<String, dynamic> _$SignupResponseToJson(SignupResponse instance) =>
     <String, dynamic>{
       'message': instance.message,
       'data': instance.data,

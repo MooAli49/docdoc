@@ -48,13 +48,13 @@ class _ApiService implements ApiService {
   }
 
   @override
-  Future<SignUpResponse> signUp(SignUpRequestBody body) async {
+  Future<SignupResponse> signup(SignupRequestBody body) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(body.toJson());
-    final _options = _setStreamType<SignUpResponse>(
+    final _options = _setStreamType<SignupResponse>(
       Options(method: 'POST', headers: _headers, extra: _extra)
           .compose(
             _dio.options,
@@ -65,9 +65,9 @@ class _ApiService implements ApiService {
           .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
     );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
-    late SignUpResponse _value;
+    late SignupResponse _value;
     try {
-      _value = SignUpResponse.fromJson(_result.data!);
+      _value = SignupResponse.fromJson(_result.data!);
     } on Object catch (e, s) {
       errorLogger?.logError(e, s, _options);
       rethrow;

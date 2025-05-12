@@ -1,4 +1,4 @@
-import 'package:docdoc/core/theme/colors_manger.dart';
+import 'package:docdoc/core/theme/colors_manager.dart';
 import 'package:docdoc/core/theme/text_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -20,7 +20,7 @@ class DoctorAndTextAndBackLogo extends StatelessWidget {
         Container(
           foregroundDecoration: BoxDecoration(
             gradient: LinearGradient(
-              colors: [ColorsManger.white, ColorsManger.white.withAlpha(0)],
+              colors: [ColorsManager.white, ColorsManager.white.withAlpha(0)],
               stops: [0.14, 0.4],
               begin: Alignment.bottomCenter,
               end: Alignment.topCenter,

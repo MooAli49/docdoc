@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'sign_up_state.dart';
+part of 'signup_state.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -16,7 +16,7 @@ final _privateConstructorUsedError = UnsupportedError(
 );
 
 /// @nodoc
-mixin _$SignUpState<T> {
+mixin _$SignupState<T> {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
@@ -66,13 +66,13 @@ mixin _$SignUpState<T> {
 /// @nodoc
 abstract class $SignUpStateCopyWith<T, $Res> {
   factory $SignUpStateCopyWith(
-    SignUpState<T> value,
-    $Res Function(SignUpState<T>) then,
-  ) = _$SignUpStateCopyWithImpl<T, $Res, SignUpState<T>>;
+    SignupState<T> value,
+    $Res Function(SignupState<T>) then,
+  ) = _$SignUpStateCopyWithImpl<T, $Res, SignupState<T>>;
 }
 
 /// @nodoc
-class _$SignUpStateCopyWithImpl<T, $Res, $Val extends SignUpState<T>>
+class _$SignUpStateCopyWithImpl<T, $Res, $Val extends SignupState<T>>
     implements $SignUpStateCopyWith<T, $Res> {
   _$SignUpStateCopyWithImpl(this._value, this._then);
 
@@ -200,7 +200,7 @@ class _$InitialImpl<T> implements _Initial<T> {
   }
 }
 
-abstract class _Initial<T> implements SignUpState<T> {
+abstract class _Initial<T> implements SignupState<T> {
   const factory _Initial() = _$InitialImpl<T>;
 }
 
@@ -319,7 +319,7 @@ class _$LoadingImpl<T> implements Loading<T> {
   }
 }
 
-abstract class Loading<T> implements SignUpState<T> {
+abstract class Loading<T> implements SignupState<T> {
   const factory Loading() = _$LoadingImpl<T>;
 }
 
@@ -466,7 +466,7 @@ class _$SuccessImpl<T> implements Success<T> {
   }
 }
 
-abstract class Success<T> implements SignUpState<T> {
+abstract class Success<T> implements SignupState<T> {
   const factory Success(final T data) = _$SuccessImpl<T>;
 
   T get data;
@@ -620,7 +620,7 @@ class _$ErrorImpl<T> implements Error<T> {
   }
 }
 
-abstract class Error<T> implements SignUpState<T> {
+abstract class Error<T> implements SignupState<T> {
   const factory Error(final String message) = _$ErrorImpl<T>;
 
   String get message;
