@@ -1,4 +1,4 @@
-import 'package:docdoc/core/theme/colors_manger.dart';
+import 'package:docdoc/core/theme/colors_manager.dart';
 import 'package:docdoc/core/theme/text_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -11,7 +11,7 @@ class AppCustomButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialButton(
-      color: ColorsManger.mainBlue,
+      color: ColorsManager.mainBlue,
       minWidth: 311.w,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16.r)),
       height: 52.h,

@@ -5,7 +5,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class LoginCubit extends Cubit<LoginState> {
-  LoginCubit({required this.loginRepo}) : super(LoginState.initial());
+  LoginCubit( this.loginRepo) : super(LoginState.initial());
 
   final LoginRepo loginRepo;
 
@@ -13,13 +13,15 @@ class LoginCubit extends Cubit<LoginState> {
   TextEditingController emailController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
 
-
-
-
-  void login(LoginRequestBody loginRequestBody) async {
+  void login() async {
     emit(LoginState.loading());
 
-    var response = await loginRepo.login(loginRequestBody);
+    var response = await loginRepo.login(
+      LoginRequestBody(
+        email: emailController.text,
+        password: passwordController.text,
+      ),
+    );
     response.when(
       success: (loginRequest) {
         emit(LoginState.success(loginRequest));

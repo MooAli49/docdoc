@@ -1,4 +1,4 @@
-import 'package:docdoc/core/theme/colors_manger.dart';
+import 'package:docdoc/core/theme/colors_manager.dart';
 import 'package:docdoc/core/theme/text_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -45,7 +45,7 @@ class AppTextFormField extends StatelessWidget {
       decoration: InputDecoration(
         isDense: true,
         filled: true,
-        fillColor: ColorsManger.lightestGrey,
+        fillColor: ColorsManager.lightestGrey,
         suffixIcon: suffixIcon,
         hintText: hintText,
         hintStyle: hintStyle ?? TextStyles.font14LightGreyW400,
@@ -56,7 +56,7 @@ class AppTextFormField extends StatelessWidget {
             enabledBorder ??
             OutlineInputBorder(
               borderSide: BorderSide(
-                color: ColorsManger.lighterGrey,
+                color: ColorsManager.lighterGrey,
                 width: 1.3,
               ),
               borderRadius: BorderRadius.circular(16.r),
@@ -64,20 +64,20 @@ class AppTextFormField extends StatelessWidget {
         focusedBorder:
             focusedBorder ??
             OutlineInputBorder(
-              borderSide: BorderSide(color: ColorsManger.mainBlue, width: 1.3),
+              borderSide: BorderSide(color: ColorsManager.mainBlue, width: 1.3),
               borderRadius: BorderRadius.circular(16.r),
             ),
         errorBorder:
             errorBorder ??
             OutlineInputBorder(
               borderSide: BorderSide(
-                color: ColorsManger.errorColor,
+                color: ColorsManager.errorColor,
                 width: 1.3,
               ),
               borderRadius: BorderRadius.circular(16.r),
             ),
         focusedErrorBorder: OutlineInputBorder(
-          borderSide: BorderSide(color: ColorsManger.errorColor, width: 1.3),
+          borderSide: BorderSide(color: ColorsManager.errorColor, width: 1.3),
           borderRadius: BorderRadius.circular(16.r),
         ),
       ),
