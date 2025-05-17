@@ -34,4 +34,6 @@ void setupGetIt() {
   getIt.registerLazySingleton<HomeRepo>(
     () => HomeRepo(getIt<HomeApiService>()),
   );
+  // getIt.registerFactory<HomeCubit>(() => HomeCubit(getIt<HomeRepo>()));
+
 }
