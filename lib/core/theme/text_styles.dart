@@ -95,9 +95,19 @@ class TextStyles {
     fontWeight: FontWeight.w400,
     color: ColorsManager.grey,
   );
+  static TextStyle font12BlueW400 = TextStyle(
+    fontSize: 12.sp,
+    fontWeight: FontWeight.w400,
+    color: ColorsManager.mainBlue,
+  );
   static TextStyle font18DarkBlueW700 = TextStyle(
     fontSize: 18.sp,
     fontWeight: FontWeight.w700,
     color: ColorsManager.darkBlue,
+  );
+  static TextStyle font18WhiteW500 = TextStyle(
+    fontSize: 18.sp,
+    fontWeight: FontWeight.w500,
+    color: ColorsManager.white,
   );
 }
