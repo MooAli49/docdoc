@@ -90,4 +90,14 @@ class TextStyles {
     fontWeight: FontWeight.w400,
     color: ColorsManager.grey,
   );
+  static TextStyle font12GreyW400 = TextStyle(
+    fontSize: 12.sp,
+    fontWeight: FontWeight.w400,
+    color: ColorsManager.grey,
+  );
+  static TextStyle font18DarkBlueW700 = TextStyle(
+    fontSize: 18.sp,
+    fontWeight: FontWeight.w700,
+    color: ColorsManager.darkBlue,
+  );
 }
