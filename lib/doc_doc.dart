@@ -19,7 +19,8 @@ class DocDoc extends StatelessWidget {
         title: 'DocDoc',
         theme: AppTheme.lightTheme,
         onGenerateRoute: appRouter.generateRoute,
-        initialRoute: Routes.onboardingScreen,
+        // TODO: make initail route to onboarding screen
+        initialRoute: Routes.homeScreen,
       ),
     );
   }
