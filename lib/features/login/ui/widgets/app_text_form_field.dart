@@ -45,7 +45,7 @@ class AppTextFormField extends StatelessWidget {
       decoration: InputDecoration(
         isDense: true,
         filled: true,
-        fillColor: ColorsManager.lightestGrey,
+        fillColor: ColorsManager.lightestGray,
         suffixIcon: suffixIcon,
         hintText: hintText,
         hintStyle: hintStyle ?? TextStyles.font14LightGreyW400,
@@ -56,7 +56,7 @@ class AppTextFormField extends StatelessWidget {
             enabledBorder ??
             OutlineInputBorder(
               borderSide: BorderSide(
-                color: ColorsManager.lighterGrey,
+                color: ColorsManager.lighterGray,
                 width: 1.3,
               ),
               borderRadius: BorderRadius.circular(16.r),
