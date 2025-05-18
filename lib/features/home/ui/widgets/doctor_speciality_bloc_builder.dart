@@ -1,4 +1,5 @@
 import 'package:docdoc/core/helper/spacing.dart';
+import 'package:docdoc/features/home/data/models/specialization_data_model.dart';
 import 'package:docdoc/features/home/logic/home_cubit/home_cubit.dart';
 import 'package:docdoc/features/home/logic/home_cubit/home_state.dart';
 import 'package:docdoc/features/home/ui/widgets/doctor_speciality_list_view.dart';
@@ -12,44 +13,45 @@ class DoctorSpecialityBlocBuilder extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<HomeCubit, HomeState>(
-                buildWhen:
-                    (previous, current) =>
-                        current is SpecializationLoading ||
-                        current is SpecializationSuccess ||
-                        current is SpecializationError,
-                builder: (context, state) {
-                  return state.maybeWhen(
-                    specializationLoading: () => setupLoading(),
-                    specializationSuccess: (specializations) {
-                      var specializationList =
-                          specializations.specializationModelList;
-                      return Expanded(
-                        child: Column(
-                          children: [
-                            DoctorSpecialityListView(
-                              specializationList: specializationList ?? [],
-                            ),
-                            verticalSpace(8),
-                            DoctorsListView(
-                              doctorModelList: specializationList?[0].doctors,
-                            ),
-                          ],
-                        ),
-                      );
-                    },
-                    specializationError: (errorHandler) => setupError(),
-                    orElse: () => SizedBox.shrink(),
-                  );
-                },
-              );
+      buildWhen:
+          (previous, current) =>
+              current is SpecializationLoading ||
+              current is SpecializationSuccess ||
+              current is SpecializationError,
+      builder: (context, state) {
+        return state.maybeWhen(
+          specializationLoading: () => setupLoading(),
+          specializationSuccess: (specializations) {
+            var specializationList = specializations.specializationModelList;
+            return setupSuccess(specializationList);
+          },
+          specializationError: (errorHandler) => setupError(),
+          orElse: () => setupError(),
+        );
+      },
+    );
   }
-   Center setupError() => Center();
 
-  SizedBox setupLoading() {
+  Widget setupSuccess(List<SpecializationDataModel>? specializationList) {
+    return Expanded(
+      child: Column(
+        children: [
+          DoctorSpecialityListView(
+            specializationList: specializationList ?? [],
+          ),
+          verticalSpace(8),
+          DoctorsListView(doctorModelList: specializationList?[0].doctors),
+        ],
+      ),
+    );
+  }
+
+  Widget setupError() => SizedBox.shrink();
+
+  Widget setupLoading() {
     return SizedBox(
       height: 100,
       child: const Center(child: CircularProgressIndicator()),
     );
   }
-
 }
