@@ -36,9 +36,6 @@ class DioFactory {
   }
 
   static void setTokenAfterLogin(String token) async {
-    var token = await SharedPrefHelper.getSecuredString(
-      SharedPrefKeys.userToken,
-    );
     dio?.options.headers = {'Authorization': 'Bearer $token'};
   }
 
