@@ -61,6 +61,10 @@ dependencies:
   flutter_svg: ^2.1.0
   # for responsive design
   flutter_screenutil: ^5.9.3
+  # plugin for reading and writing simple key-value pairs.
+  shared_preferences: ^2.5.3
+  # Secure Storage provides API to store data in secure storage
+  flutter_secure_storage: ^9.2.4
 
 dev_dependencies:
   flutter_test:

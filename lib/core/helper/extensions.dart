@@ -30,3 +30,7 @@ extension Navigastion on BuildContext {
     return Navigator.pop(this, result);
   }
 }
+
+extension StringExtension on String? {
+  bool isNullOrEmpty() => this == null || this == "";
+}

@@ -11,7 +11,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class AppRouter {
-  Route generateRoute(RouteSettings settings) {
+  Route? generateRoute(RouteSettings settings) {
     //  this args is used to pass data between screens like this arguments: arguyment as className
     // final args = settings.arguments;
     switch (settings.name) {
@@ -46,14 +46,7 @@ class AppRouter {
         );
 
       default:
-        return MaterialPageRoute(
-          builder:
-              (_) => Scaffold(
-                body: Center(
-                  child: Text("No route defined for ${settings.name}"),
-                ),
-              ),
-        );
+        return null;
     }
   }
 }
