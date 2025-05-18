@@ -1,3 +1,4 @@
+import 'package:docdoc/core/helper/constants.dart';
 import 'package:docdoc/core/routing/app_router.dart';
 import 'package:docdoc/core/routing/routes.dart';
 import 'package:docdoc/core/theme/app_theme.dart';
@@ -19,8 +20,8 @@ class DocDoc extends StatelessWidget {
         title: 'DocDoc',
         theme: AppTheme.lightTheme,
         onGenerateRoute: appRouter.generateRoute,
-        // TODO: make initail route to onboarding screen
-        initialRoute: Routes.homeScreen,
+        initialRoute:
+            isLoggedInUser ? Routes.homeScreen : Routes.onboardingScreen,
       ),
     );
   }
